@@ -1,0 +1,37 @@
+@import '../styles.scss';
+
+nav {
+    padding: 20px 60px;
+    box-shadow: $sombra;
+    position: static;
+    
+    span {
+        font-weight: 800;
+        font-size: 1.4rem;
+        cursor: default;
+    }
+
+    button {
+        float: right;
+        background-color: $veryLightGrey-lightMode;
+        border: 0px solid transparent;
+        font-weight: 600;
+        padding: 5px 10px;
+        border-radius: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: box-shadow 0.3s ease;
+        
+        &:hover {
+            box-shadow: 5px 5px 10px rgb(228, 228, 228);
+        }
+
+        img {
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-right: 10px;
+            padding: 0;
+        }
+    }
+}
