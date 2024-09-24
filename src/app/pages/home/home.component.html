@@ -1,14 +1,18 @@
-<div class="container-fluid" id="content">
-    <div class="container-fluid">     
+<div id="content" class="container-fluid">
+    <div id="searchArea" class="container-fluid">     
         <div class="flexDataDiv"> 
             <label for="countrySearch">Search for a country</label>
-            <input type="text" pInputText [(ngModel)]="inputValue" id="countrySearch" variant="filled"/>
+            <input id="countrySearch" type="text" pInputText [(ngModel)]="inputValue"  variant="filled"/>
         </div>
-        <div class="flexDataDiv" id="flexDropdown">
+        <div id="flexDropdown" class="flexDataDiv">
             <label for="dropdown">Filter by Region</label>
             <select id="dropdown" pInputText [(ngModel)]="selectedRegion" (change)="onSelectChange($event)">
               <option *ngFor="let regiao of regioes" [value]="regiao">{{ regiao }}</option>
             </select>
         </div>          
+    </div>
+
+    <div id="cardsArea">
+        <app-nation-card/>
     </div>
 </div>
