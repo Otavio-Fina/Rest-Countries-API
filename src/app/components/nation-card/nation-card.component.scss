@@ -1,1 +1,38 @@
-@import '../../../styles.scss';
+@use '../../../styles.scss' as *;
+
+
+.card {
+    
+    border-color: transparent;
+    box-shadow: $sombra;
+    transition: box-shadow 0.3s ease , border 0.3s ease;
+
+    &:hover {
+        box-shadow: 5px 5px 10px rgb(228, 228, 228);
+        border: 1px solid $veryLightGrey-lightMode;
+    }
+
+
+    .card-body {
+        padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x) calc(var(--bs-card-spacer-y) + 1.6em) var(--bs-card-spacer-x);
+        color: var(--bs-card-color);
+    
+        .card-title {
+            margin: 0.6rem 0 0.9rem 0;
+            color: var(--bs-card-title-color);
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+    
+        .card-text {
+            margin-top: 0;
+            margin-bottom: 0.2rem;
+            font-size: 0.9rem;
+    
+            b {
+                font-weight: 600;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
