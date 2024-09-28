@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { NationServiceService } from '../../services/nation-service.service'; 
-import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nation-card',
@@ -9,18 +7,10 @@ import { OnInit } from '@angular/core';
   templateUrl: './nation-card.component.html',
   styleUrl: './nation-card.component.scss'
 })
-export class NationCardComponent implements OnInit {
+export class NationCardComponent {
   name: string = '';
   population: number = 0;
   capital: string = '';
   region: string = '';
 
-  constructor(private nationService: NationServiceService) {}
-
-  ngOnInit(): void {
-      this.nationService.testeConsoleLog();
-  }
-
-
-  
 }
