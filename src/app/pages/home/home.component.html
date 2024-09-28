@@ -13,10 +13,7 @@
     </div>
 
     <div id="cardsArea">
-        <app-nation-card/>
-        <app-nation-card/>
-        <app-nation-card/>
-        <app-nation-card/>
-        <app-nation-card/>
+        <app-nation-card *ngFor="let pais of data" [name]="pais.name.common" [population]="pais.population" [capital]="pais.capital"
+        [region]="pais.region" [flag]="pais.flags.png" [alt]="pais.flags.alt"  />
     </div>
 </div>

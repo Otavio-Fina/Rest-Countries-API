@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-nation-card',
@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './nation-card.component.scss'
 })
 export class NationCardComponent {
-  name: string = '';
-  population: number = 0;
-  capital: string = '';
-  region: string = '';
+  @Input() name: string = '';
+  @Input() population: number = 0;
+  @Input() capital: string = '';
+  @Input() region: string = '';
+  @Input() flag: string = '';
+  @Input() alt: string = '';
 
 }

@@ -8,27 +8,19 @@ import { HttpClient } from '@angular/common/http';
 export class NationServiceService {
 
   filterRegion = "";
-  filterName = "";
-  url = "https://restcountries.com/v3.1/independent?status=true&fields=languages,capital,name,capital,region,population,flags";
-  regionUrl = `https://restcountries.com/v3.1/region/${this.filterRegion}?status=true&fields=languages,capital,name,capital,region,population,flags`;
-  data: Observable<any>;
+  url = "https://restcountries.com/v3.1/independent?status=true&fields=languages,capital,name,region,population,flags";
 
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { 
-    this.data = http.get(this.url)
+  getData(): Observable<any> {
+    return this.http.get(this.url);
   }
 
-  testeConsoleLog() {
-    this.data.subscribe((r) => console.log(JSON.stringify(r)));
-  }
+  filterByRegion(): Observable<any> {
+    const regionUrl = this.filterRegion 
+      ? `https://restcountries.com/v3.1/region/${this.filterRegion}?status=true&fields=languages,capital,name,region,population,flags`
+      : this.url;
 
-  filterByRegion() {
-    if (this.filterRegion == "") {
-      this.data = this.http.get(this.url)
-    } else {
-      this.data = this.http.get("https://restcountries.com/v3.1/region/" + this.filterRegion + "?status=true&fields=languages,capital,name,capital,region,population,flags")
-    }
+    return this.http.get(regionUrl);
   }
-
 }
-
