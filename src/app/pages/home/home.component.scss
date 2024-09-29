@@ -22,10 +22,15 @@
             padding: 15px 30px;
             border-radius: 5px 10px;
             background-color: $veryLightGrey-lightMode;
+            border-width: 1px;
             
             &:hover , &:focus {
-                box-shadow: 5px 5px 10px rgb(228, 228, 228);
-                border: 2px solid $veryLightGrey-lightMode;
+                box-shadow: $sombra2;
+                border-width: 1px;
+            }
+
+            &:focus-visible {
+                outline: 0;
             }
         }
     }
@@ -40,7 +45,7 @@
             background-color: $veryLightGrey-lightMode;
             
             &:hover , &:focus {
-                box-shadow: 5px 5px 10px rgb(228, 228, 228);
+                box-shadow: $sombra2;
                 border: 2px solid $veryLightGrey-lightMode;
             }
         }

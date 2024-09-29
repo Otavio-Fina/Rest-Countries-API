@@ -10,4 +10,18 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Rest-Countries-API';
+
+  darkMode:boolean = false;
+
+  toggleDarkMode(): void {
+    this.darkMode =!this.darkMode;
+
+    if (this.darkMode) {
+      document.body.classList.add('darkMode');
+      console.log(document.body.classList);
+    } else {
+      document.body.classList.remove('darkMode');
+      console.log(document.body.classList);
+    }
+  }
 }

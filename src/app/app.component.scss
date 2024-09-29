@@ -25,7 +25,7 @@ nav {
         transition: box-shadow 0.3s ease;
         
         &:hover {
-            box-shadow: 5px 5px 10px rgb(228, 228, 228);
+            box-shadow: $sombra2;
         }
 
         img {

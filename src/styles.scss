@@ -22,6 +22,10 @@ $veryLightGrey-lightMode: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
 
 $sombra: 1px 1px 10px rgb(228, 228, 228);
+$sombra2: 5px 5px 10px rgb(228, 228, 228);
+
+$sombra-darkMode: 1px 1px 10px rgb(27, 27, 27) !important;
+$sombra2-darkMode: 5px 5px 10px rgb(27, 27, 27) !important;
 
 * {
     margin: 0;
@@ -41,7 +45,41 @@ body {
     transition: background-color 0.3s ease;
 }
 
+body.darkMode {
+    background-color: $veryDarkBlue-darkMode !important;
 
+    
+
+    * {
+        background-color: $darkBlue-darkMode !important;
+        color: $white !important;
+        border-color: transparent !important;
+    }
+
+    #content, #searchArea, #cardsArea, .flexDataDiv {
+        background-color: $veryDarkBlue-darkMode !important;
+
+        input:hover , input:focus {
+            border: 1px solid $veryDarkBlue-darkMode !important;
+        }
+
+        label {
+            background-color: $veryDarkBlue-darkMode !important;
+        }
+    }
+
+    nav, .card {
+        box-shadow: $sombra-darkMode;
+    }
+
+    nav button, .card, input, select, option {
+        &:focus, &:hover {
+            box-shadow: $sombra2-darkMode;
+        }
+    }
+
+    
+}
 
 
 
