@@ -13,6 +13,12 @@
         border: 1px solid $veryLightGrey-lightMode;
     }
 
+    .card-img-top {
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 1 / 0.703125;
+        object-position: top;
+    }
 
     .card-body {
         padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x) calc(var(--bs-card-spacer-y) + 1.6em) var(--bs-card-spacer-x);

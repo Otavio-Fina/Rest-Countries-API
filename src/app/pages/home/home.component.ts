@@ -4,6 +4,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
 import { NationCardComponent } from '../../components/nation-card/nation-card.component';
 import { NationServiceService } from '../../services/nation-service.service'; 
+import { StringFormatterService } from '../../services/string-formatter.service';
 
 @Component({
   selector: 'app-home',
@@ -17,36 +18,36 @@ export class HomeComponent implements OnInit {
   regioes: string[] = ['Select a Region', 'Africa', 'Europe', 'America', 'Asia', 'Oceania'];
   selectedRegion: string = '';
   inputValue: string = '';
-  data: any[] = [];
+  dataSOR: any[] = [];
+  dataSpec: any[] = [];
 
-  constructor(private nationService: NationServiceService) {}
+  constructor(private nationService: NationServiceService, public stringFormatterService: StringFormatterService) {}
 
   ngOnInit() {
     this.nationService.getData().subscribe(data => {
-      this.data = data;
-      console.log(this.data);
+      this.dataSOR = this.stringFormatterService.ordenacao(data);
+      this.dataSpec = this.stringFormatterService.ordenacao(data)
+      console.log(this.dataSOR);
     });
   }
 
-  onSelectChange(event: Event) {
-    const selectedValue = (event.target as HTMLSelectElement).value;
-    this.selectedRegion = selectedValue;
+  onSelectChange() {
 
     this.nationService.filterRegion = this.selectedRegion === 'Select a Region' ? '' : this.selectedRegion === 'America' ? 'Americas' : this.selectedRegion;
     this.nationService.filterByRegion().subscribe(data => {
-      this.data = data;
-      console.log(this.data);
+      this.dataSOR = this.stringFormatterService.ordenacao(data); //como este codigo tbm volta a data ao normal prefiro atribuir o filtro ao sot pq é mais facil
+      console.log(this.dataSOR);
+      this.onNameSearch()
     });
   }
 
-  onNameSearch(event: Event) {
-    const value = (event.target as HTMLSelectElement).value;
-    this.inputValue = value;
+  onNameSearch() {
 
-    let filtredData = []
+    this.dataSpec = this.dataSOR
+    let filteredData = this.dataSOR.filter(country => 
+      country.name.common.toLowerCase().startsWith(this.inputValue.toLowerCase())
+    );
 
-    for (let country in this.data) {
-    
-    }
+    this.dataSpec = filteredData;
   }
 }

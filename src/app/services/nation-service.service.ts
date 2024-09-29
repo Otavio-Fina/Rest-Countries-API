@@ -17,9 +17,9 @@ export class NationServiceService {
   }
 
   filterByRegion(): Observable<any> {
-    const regionUrl = this.filterRegion 
-      ? `https://restcountries.com/v3.1/region/${this.filterRegion}?status=true&fields=languages,capital,name,region,population,flags`
-      : this.url;
+    const regionUrl = this.filterRegion === ''
+      ? this.url
+      : `https://restcountries.com/v3.1/region/${this.filterRegion}?status=true&fields=languages,capital,name,region,population,flags`;
 
     return this.http.get(regionUrl);
   }

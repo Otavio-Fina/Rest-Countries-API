@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class NationCardComponent {
   @Input() name: string = '';
-  @Input() population: number = 0;
+  @Input() population: string = '';
   @Input() capital: string = '';
   @Input() region: string = '';
   @Input() flag: string = '';

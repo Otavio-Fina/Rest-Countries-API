@@ -2,18 +2,23 @@
     <div id="searchArea" class="container-fluid">     
         <div class="flexDataDiv"> 
             <label for="countrySearch">Search for a country</label>
-            <input id="countrySearch" type="text" pInputText [(ngModel)]="inputValue"  variant="filled"/>
+            <input id="countrySearch" (input)="onNameSearch()" type="text" pInputText [(ngModel)]="inputValue"  variant="filled"/>
         </div>
         <div id="flexDropdown" class="flexDataDiv">
             <label for="dropdown">Filter by Region</label>
-            <select id="dropdown" pInputText [(ngModel)]="selectedRegion" (change)="onSelectChange($event)">
+            <select id="dropdown" pInputText [(ngModel)]="selectedRegion" (change)="onSelectChange()">
               <option *ngFor="let regiao of regioes" [value]="regiao">{{ regiao }}</option>
             </select>
         </div>          
     </div>
 
     <div id="cardsArea">
-        <app-nation-card *ngFor="let pais of data" [name]="pais.name.common" [population]="pais.population" [capital]="pais.capital"
-        [region]="pais.region" [flag]="pais.flags.png" [alt]="pais.flags.alt"  />
+        <app-nation-card *ngFor="let pais of dataSpec" 
+                 [name]="pais.name.common" 
+                 [population]="stringFormatterService.populationFormatter(pais.population)" 
+                 [capital]="pais.capital"
+                 [region]="pais.region" 
+                 [flag]="pais.flags.png" 
+                 [alt]="pais.flags.alt" />
     </div>
 </div>
