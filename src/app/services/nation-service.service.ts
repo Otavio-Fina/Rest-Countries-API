@@ -9,6 +9,7 @@ export class NationServiceService {
 
   filterRegion = "";
   url = "https://restcountries.com/v3.1/independent?status=true&fields=languages,capital,name,region,population,flags";
+  urlByName = "https://restcountries.com/v3.1/name/";
 
   constructor(private http: HttpClient) {}
 

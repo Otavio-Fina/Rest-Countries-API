@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { NationCardComponent } from '../../components/nation-card/nation-card.component';
 import { NationServiceService } from '../../services/nation-service.service'; 
 import { StringFormatterService } from '../../services/string-formatter.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +22,7 @@ export class HomeComponent implements OnInit {
   dataSOR: any[] = [];
   dataSpec: any[] = [];
 
-  constructor(private nationService: NationServiceService, public stringFormatterService: StringFormatterService) {}
+  constructor(private nationService: NationServiceService, public stringFormatterService: StringFormatterService, public router: Router) {}
 
   ngOnInit() {
     this.nationService.getData().subscribe(data => {
@@ -49,5 +50,9 @@ export class HomeComponent implements OnInit {
     );
 
     this.dataSpec = filteredData;
+  }
+
+  goSeeDetails(queryName: string) {
+    this.router.navigate(["detail", queryName])
   }
 }
