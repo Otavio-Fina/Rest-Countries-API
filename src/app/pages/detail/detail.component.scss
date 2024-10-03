@@ -1,1 +1,96 @@
 @import "../../../styles.scss";
+
+#content {
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+
+    button {
+        width: 100px;
+        height: 40px;
+        padding: 5px;
+        border: 1px solid rgb(118, 118, 118);
+        border-radius: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transition: box-shadow 0.3s ease, border 0.3s ease;
+
+        &:hover, &:focus {
+            box-shadow: 5px 5px 10px rgb(228, 228, 228);
+        }
+
+        img {
+            max-width: 20px;
+            max-height: 20px;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    #container-infos {
+
+        margin-top: 90px;
+        display: grid;
+        grid-template-columns: auto auto;
+
+
+
+        img {
+            width: 90%;
+        }
+
+
+        .infos{
+
+            b {
+                font-weight: 600;
+                font-size: 1.1rem;
+                background-color: transparent !important;
+            }
+            
+            .title {
+                margin: 0.6rem 0 0.9rem 0;
+                color: var(--bs-card-title-color);
+                font-size: 2rem;
+                font-weight: 800;
+                background-color: transparent !important;
+            }
+
+            .text-div {
+                background-color: transparent !important;
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+
+            .text {
+                margin-top: 0;
+                margin-bottom: 0.2rem;
+                font-size: 1.1rem;
+                background-color: transparent !important;
+                
+                span {
+                    background-color: transparent !important;
+                }
+            }
+
+            .borderCountriesDiv {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                
+                button {
+                    font-size: 0.6rem;
+                    padding: 2px;
+                    width: 75px;
+                    height: 30px;
+                    margin: 3px;
+                }
+
+                span {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

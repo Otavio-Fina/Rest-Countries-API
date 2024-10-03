@@ -56,7 +56,7 @@ body.darkMode {
         border-color: transparent !important;
     }
 
-    #content, #searchArea, #cardsArea, .flexDataDiv {
+    #content, #searchArea, #cardsArea, .flexDataDiv, #container-infos, .infos {
         background-color: $veryDarkBlue-darkMode !important;
 
         input:hover , input:focus {
@@ -72,7 +72,7 @@ body.darkMode {
         box-shadow: $sombra-darkMode;
     }
 
-    nav button, .card, input, select, option {
+    nav button, .card, input, select, option, #backButton {
         &:focus, &:hover {
             box-shadow: $sombra2-darkMode;
         }

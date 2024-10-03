@@ -1,1 +1,34 @@
-<p>detail works! {{ queryName }}</p>
+<div id="content" >
+    <button class="btn" id="backButton" (click)="this.location.back()"> 
+        <img [src]="backButtonImage" alt="GoBack"> back
+    </button>
+
+    <div id="container-infos">
+        <img [src]="data[0].flags.png" alt="flag">
+
+        <div class="infos">
+            <h5 class="title">{{ data[0].name.common }}</h5>
+            <div class="text-div">
+                <p class="text"> <b>Native Name:</b> {{ data[0].name.nativeName[keyAleatoria(data[0].name.nativeName)].common }}</p>
+                <p class="text"> <b>Top Level Domain:</b> {{ data[0].tld }}</p>
+                <p class="text"> <b>Population:</b> {{ stringFormatterService.populationFormatter(data[0].population) }}</p>
+                <p class="text"> <b>Currencies:</b> {{ data[0].currencies[keyFirts(data[0].currencies)].name }}({{ data[0].currencies[keyFirts(data[0].currencies)].symbol }})</p>
+                <p class="text"> <b>Region:</b> {{ data[0].region }}</p>
+                <p class="text"> <b>Languages:</b> 
+                    <span *ngFor="let language of getValues(data[0].languages); let last = last">
+                        {{ language }}<span *ngIf="!last">, </span>
+                      </span></p>
+                <p class="text"> <b>Sub Region:</b> {{ data[0].subregion }}</p>
+                <p class="text"> <b>Capital:</b> {{ data[0].capital }}</p>
+            </div>
+            <div class="borderCountriesDiv">
+                <p><b>Border Countries: </b></p> 
+                <button 
+                *ngFor="let borda of borderNames"
+                class="btn"
+                (click)="this.router.navigate(['detail', borda])"
+                >{{ borda || "Loading ..." }}</button> <span *ngIf="borderNames.length == 0">None :)</span>
+            </div>
+        </div>
+    </div>
+</div>
