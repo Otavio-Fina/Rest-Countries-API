@@ -116,26 +116,9 @@
 
 @media screen and (max-width: 1100px) {
     #content {
-    
-        button {
-
-    
-            &:hover, &:focus {
-
-            }
-    
-            img {
-
-            }
-        }
-    
         #container-infos {
 
             margin-top: 20px;
-  
-            img {
-            }
-    
     
             .infos{
     
@@ -145,9 +128,6 @@
                 
                 .title {
                     font-size: 1.9rem;
-                }
-    
-                .text-div {
                 }
     
                 .text {
@@ -161,16 +141,12 @@
     
                 .borderCountriesDiv {
     
-                    p, b {
-                    }
+
                     
                     button { 
                         padding: 0px;
                         width: 60px;
                         height: 20px;
-                    }
-    
-                    span {
                     }
                 }
             }
@@ -181,102 +157,56 @@
 @media screen and (max-width: 750px) {
     #content {
     
-        button {
-
-    
-            &:hover, &:focus {
-
-            }
-    
-            img {
-
-            }
-        }
-    
         #container-infos {
-  
-            img {
-            }
-    
-    
-            .infos{
-    
-                b {
-                }
-                
-                .title {
-                }
-    
-                .text-div {
-                }
-    
-                .text {
-                    }
-                    
-                }
-    
-                .borderCountriesDiv {
-    
-                    p, b {
-                    }
-                    
-                    button { 
-                    }
-    
-                    span {
-                    }
-                }
-            }
+            grid-template-columns: auto;
+            justify-content: center;
+            
         }
+    }
 }
 
 @media screen and (max-width: 550px) {    
     #content {
     
         button {
-
-    
-            &:hover, &:focus {
-
-            }
-    
-            img {
-
+            width: 50px;
+            span {
+                display: none;
             }
         }
     
         #container-infos {
   
-            img {
-            }
+            
     
     
             .infos{
     
                 b {
+                    font-size: 0.7rem;
                 }
                 
                 .title {
-                }
-    
-                .text-div {
+                    font-size: 1.5rem;
                 }
     
                 .text {
+                    font-size: 0.7rem;
+                    span{
+                        font-size: 0.7rem;
+                    }
                     }
                     
                 }
     
                 .borderCountriesDiv {
-    
-                    p, b {
-                    }
-                    
+                    align-items: center;
                     button { 
+                        font-size: 0.4rem !important;
+                        width: 50px !important;
+                        height: 20px !important;
                     }
     
-                    span {
-                    }
                 }
             }
         }
