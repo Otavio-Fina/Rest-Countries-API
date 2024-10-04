@@ -1,7 +1,7 @@
 
 <nav class="">
   <span class="span-nav">Where is the World?</span>
-  <button type="button" (click)="toggleDarkMode()"> <img [src]="darkMode ? '../assets/sun-o.svg' : '../assets/moon-o.svg'" alt=""> {{ darkMode ? 'White Mode' : 'Dark Mode' }} </button>
+  <button type="button" (click)="toggleDarkMode()"> <img [src]="darkMode ? '../assets/sun-o.svg' : '../assets/moon-o.svg'" alt=""> <span>{{ darkMode ? 'White Mode' : 'Dark Mode' }}</span> </button>
 </nav>
 
 <router-outlet />

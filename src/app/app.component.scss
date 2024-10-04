@@ -23,6 +23,12 @@ nav {
         align-items: center;
         justify-content: center;
         transition: box-shadow 0.3s ease;
+
+        span {
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+        }
         
         &:hover {
             box-shadow: $sombra2;
@@ -33,6 +39,20 @@ nav {
             height: 1.2rem;
             margin-right: 10px;
             padding: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {    
+    nav {
+        button {
+            span {
+                display: none;
+            }
+
+            img {
+                margin: 0px;
+            }
         }
     }
 }

@@ -72,7 +72,7 @@ body.darkMode {
         box-shadow: $sombra-darkMode;
     }
 
-    nav button, .card, input, select, option, #backButton {
+    nav button, .card, input, select, option, #backButton, .btn {
         &:focus, &:hover {
             box-shadow: $sombra2-darkMode;
         }

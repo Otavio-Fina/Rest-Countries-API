@@ -33,6 +33,7 @@
         margin-top: 90px;
         display: grid;
         grid-template-columns: auto auto;
+        align-items: center;
 
 
 
@@ -68,16 +69,21 @@
                 margin-bottom: 0.2rem;
                 font-size: 1.1rem;
                 background-color: transparent !important;
-                
                 span {
                     background-color: transparent !important;
                 }
+                
             }
 
             .borderCountriesDiv {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
+                background-color: transparent !important;
+
+                p, b {
+                    background-color: transparent !important;
+                }
                 
                 button {
                     font-size: 0.6rem;
@@ -85,6 +91,8 @@
                     width: 75px;
                     height: 30px;
                     margin: 3px;
+
+                    
                 }
 
                 span {
@@ -93,4 +101,183 @@
             }
         }
     }
+}
+
+
+@media screen and (max-width: 1450px) {
+    #content {
+    
+        #container-infos {
+            grid-template-columns: 55% 45%;
+            }
+        }
+    }
+
+
+@media screen and (max-width: 1100px) {
+    #content {
+    
+        button {
+
+    
+            &:hover, &:focus {
+
+            }
+    
+            img {
+
+            }
+        }
+    
+        #container-infos {
+
+            margin-top: 20px;
+  
+            img {
+            }
+    
+    
+            .infos{
+    
+                b {
+                    font-size: 0.9rem;
+                }
+                
+                .title {
+                    font-size: 1.9rem;
+                }
+    
+                .text-div {
+                }
+    
+                .text {
+                    font-size: 0.9rem;
+                    span{
+                        font-size: 0.9rem;
+                    }
+                    }
+                    
+                }
+    
+                .borderCountriesDiv {
+    
+                    p, b {
+                    }
+                    
+                    button { 
+                        padding: 0px;
+                        width: 60px;
+                        height: 20px;
+                    }
+    
+                    span {
+                    }
+                }
+            }
+        }
+    
+}
+
+@media screen and (max-width: 750px) {
+    #content {
+    
+        button {
+
+    
+            &:hover, &:focus {
+
+            }
+    
+            img {
+
+            }
+        }
+    
+        #container-infos {
+  
+            img {
+            }
+    
+    
+            .infos{
+    
+                b {
+                }
+                
+                .title {
+                }
+    
+                .text-div {
+                }
+    
+                .text {
+                    }
+                    
+                }
+    
+                .borderCountriesDiv {
+    
+                    p, b {
+                    }
+                    
+                    button { 
+                    }
+    
+                    span {
+                    }
+                }
+            }
+        }
+}
+
+@media screen and (max-width: 550px) {    
+    #content {
+    
+        button {
+
+    
+            &:hover, &:focus {
+
+            }
+    
+            img {
+
+            }
+        }
+    
+        #container-infos {
+  
+            img {
+            }
+    
+    
+            .infos{
+    
+                b {
+                }
+                
+                .title {
+                }
+    
+                .text-div {
+                }
+    
+                .text {
+                    }
+                    
+                }
+    
+                .borderCountriesDiv {
+    
+                    p, b {
+                    }
+                    
+                    button { 
+                    }
+    
+                    span {
+                    }
+                }
+            }
+        }
 }
