@@ -97,6 +97,7 @@
 
                 span {
                     margin-left: 10px;
+                    background-color: transparent !important;
                 }
             }
         }
@@ -147,6 +148,10 @@
                         padding: 0px;
                         width: 60px;
                         height: 20px;
+                    }
+
+                    span {
+                        font-size: 0.9rem;
                     }
                 }
             }
@@ -205,6 +210,9 @@
                         font-size: 0.4rem !important;
                         width: 50px !important;
                         height: 20px !important;
+                    }
+                    span {
+                        font-size: 0.7rem;
                     }
     
                 }
