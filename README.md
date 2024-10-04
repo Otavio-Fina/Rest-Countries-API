@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/Otavio-Fina/Rest-Countries-API](https://github.com/Otavio-Fina/Rest-Countries-API)
-- Live Site URL: [rest-countries-api-byotaviofina.vercel.app](rest-countries-api-byotaviofina.vercel.app)
+- Live Site URL: [rest-countries-api-byotaviofina.vercel.app](https://rest-countries-api-byotaviofina.vercel.app)
 
 ## My process
 
