@@ -45,6 +45,14 @@ nav {
 
 @media screen and (max-width: 550px) {    
     nav {
+        flex-wrap: nowrap;
+        display: flex;
+        justify-content: space-between;
+        span {
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+
         button {
             span {
                 display: none;
@@ -53,6 +61,7 @@ nav {
             img {
                 margin: 0px;
             }
+            max-height: 32px;
         }
     }
 }
