@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Otavio-Fina/Rest-Countries-API)
-- Live Site URL: [Add live site URL here](rest-countries-api-byotaviofina.vercel.app)
+- Solution URL: [https://github.com/Otavio-Fina/Rest-Countries-API](https://github.com/Otavio-Fina/Rest-Countries-API)
+- Live Site URL: [rest-countries-api-byotaviofina.vercel.app](rest-countries-api-byotaviofina.vercel.app)
 
 ## My process
 
